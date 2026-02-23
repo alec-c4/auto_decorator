@@ -3,6 +3,7 @@
 require_relative "auto_decorator/version"
 require_relative "auto_decorator/configuration"
 require_relative "auto_decorator/loader"
+require_relative "auto_decorator/railtie"
 
 module AutoDecorator
   class << self
