@@ -1,0 +1,10 @@
+# frozen_string_literal: true
+
+<% namespaces.each_with_index do |ns, i| -%>
+<%= "  " * i %>module <%= ns %>
+<% end -%>
+<%= "  " * namespaces.size %>module <%= decorator_name %>
+<%= "  " * namespaces.size %>end
+<% namespaces.reverse.each_with_index do |_ns, i| -%>
+<%= "  " * (namespaces.size - 1 - i) %>end
+<% end -%>
