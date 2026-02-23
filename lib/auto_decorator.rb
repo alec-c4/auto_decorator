@@ -2,6 +2,7 @@
 
 require_relative "auto_decorator/version"
 require_relative "auto_decorator/configuration"
+require_relative "auto_decorator/loader"
 
 module AutoDecorator
   class << self
