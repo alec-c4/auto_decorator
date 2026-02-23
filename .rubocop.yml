@@ -34,6 +34,3 @@ RSpec/SpecFilePathFormat:
 
 RSpec/MultipleDescribes:
   Enabled: false
-
-RSpec/EmptyExampleGroup:
-  Enabled: false
