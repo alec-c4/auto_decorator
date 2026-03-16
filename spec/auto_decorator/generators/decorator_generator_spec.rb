@@ -7,10 +7,10 @@ require "rails/version"
 # Rails 7.0 does not have the testing module
 if Rails::VERSION::MAJOR > 7 || (Rails::VERSION::MAJOR == 7 && Rails::VERSION::MINOR > 0)
   require "rails/generators/testing/behavior"
-  require "generators/auto_decorator/decorator_generator"
+  require "generators/decorator/decorator_generator"
   require "fileutils"
 
-  RSpec.describe AutoDecorator::Generators::DecoratorGenerator do
+  RSpec.describe DecoratorGenerator do
     include Rails::Generators::Testing::Behavior
     include FileUtils
 
@@ -43,7 +43,7 @@ if Rails::VERSION::MAJOR > 7 || (Rails::VERSION::MAJOR == 7 && Rails::VERSION::M
     end
   end
 else
-  RSpec.describe "AutoDecorator::Generators::DecoratorGenerator" do
+  RSpec.describe "DecoratorGenerator" do
     it "skips generator tests on Rails 7.0 (no testing support)" do
       skip "Rails generators testing not available in Rails 7.0"
     end
