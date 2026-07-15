@@ -26,7 +26,7 @@ if Rails::VERSION::MAJOR > 7 || (Rails::VERSION::MAJOR == 7 && Rails::VERSION::M
         file_path = File.join(destination_root, "app/decorators/user_decorator.rb")
         expect(File).to exist(file_path)
         content = File.read(file_path)
-        expect(content).to match(/module UserDecorator/)
+        expect(content).to include("module UserDecorator")
       end
     end
 
@@ -37,8 +37,8 @@ if Rails::VERSION::MAJOR > 7 || (Rails::VERSION::MAJOR == 7 && Rails::VERSION::M
         file_path = File.join(destination_root, "app/decorators/organizations/employee_decorator.rb")
         expect(File).to exist(file_path)
         content = File.read(file_path)
-        expect(content).to match(/module Organizations/)
-        expect(content).to match(/module EmployeeDecorator/)
+        expect(content).to include("module Organizations")
+        expect(content).to include("module EmployeeDecorator")
       end
     end
   end
