@@ -1,5 +1,11 @@
 ## [Unreleased]
 
+## [0.2.0] - 2026-11-11
+
+### Changed
+
+- **Breaking:** Require Ruby 3.3 or newer. Ruby 3.2 is no longer supported.
+
 ## [0.1.2] - 2026-07-15
 
 ### Changed
